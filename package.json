@@ -1,0 +1,26 @@
+{
+  "name": "simple-redux-lib",
+  "version": "1.0.0",
+  "description": "A simple redux js implementation.",
+  "main": "app.js",
+  "scripts": {
+    "clean": "rm public/bundle.js",
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "keywords": ["demystifying redux js"],
+  "author": "Zafar Ali",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
