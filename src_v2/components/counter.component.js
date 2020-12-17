@@ -1,15 +1,18 @@
 import { increment, decrement } from "../redux/actions/actionCreators";
-import { chalkLog } from "../../util";
+import { chalkLog, chalkLogGroup } from "../../util";
 
 export default class CounterComponent {
   constructor(store) {
+    chalkLogGroup.redish('Counter Component');
+    
     this.state = {
       counter: 0,
     };
 
     store.subscribe(()=> { // Subscribe/Connect to store
       const state = store.getState();
-      chalkLog.brown('counterComponent:subscribe -> store.getState()', state);
+      chalkLogGroup.redish('Counter Component');
+      chalkLog.brown('subscribe -> store.getState()', state);
       this.setState({...state.counter})
     });
 
@@ -35,7 +38,8 @@ export default class CounterComponent {
   // Render the UI
   render() { 
     const {counter} = this.state;
-    chalkLog.teal('counterComponent:render -> counter', counter);
+    chalkLog.teal('render -> counter', counter);
+    console.groupEnd();
     this.counterElementRef.textContent = counter; 
   }
 }

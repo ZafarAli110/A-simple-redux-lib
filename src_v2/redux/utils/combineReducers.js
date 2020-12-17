@@ -1,4 +1,4 @@
-import { chalkLog } from "../../../util";
+import { chalkLog, chalkLogGroup } from "../../../util";
 /* 
   The combineReducers function call takes an object with reducers and returns a reducer 
   function, the returned function must have the signature of a reducer function (the state and an action).
@@ -12,9 +12,12 @@ export default function combineReducers(reducers) {
   // Returns a root reducer function, our createStore function will call this function
   // with state and action whenever we dispatch an action via store.dispatch
   return function combination(state = {}, action) { 
-    chalkLog.crimson('combineReducers -> combination has been invoked.')
+    chalkLogGroup.cadetBlue('CombineReducers');
+    chalkLog.crimson('combination -> received state', state);
+    chalkLog.crimson('combination -> received action', action);
     const nextState = {}; // This is the final object we are going to return
 
+    chalkLog.crimson('combination is invoking all the reducers...');
     // Loop through all the reducer keys
     for (let i = 0; i < reducerKeys.length; i++) {
       // Get the current key name
@@ -32,6 +35,8 @@ export default function combineReducers(reducers) {
       nextState[reducerKey] = nextStateOfReducer; 
     }
 
+    chalkLog.crimson('combineReducers -> combination returns a newState', nextState);
+    console.groupEnd();
     return nextState;
   }
 }

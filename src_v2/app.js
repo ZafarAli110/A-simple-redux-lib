@@ -6,10 +6,10 @@ import TodoComponent from "./components/todo.component";
 const store = createStore(rootReducer, {});
 
 function loadApp() {
-  const counterComponent = new CounterComponent(store);
-  const todoComponent = new TodoComponent(store);
   // render the initialState
-  counterComponent.render(); 
+  const counterComponent = new CounterComponent(store);
+  counterComponent.render();
+  const todoComponent = new TodoComponent(store);
   todoComponent.render(); 
 }
 

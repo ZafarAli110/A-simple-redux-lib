@@ -1,8 +1,10 @@
-import { chalkLog } from "../../util";
+import { chalkLog, chalkLogGroup } from "../../util";
 import { addTodo, redo, undo } from "../redux/actions/actionCreators";
 
 export default class TodoComponent {
   constructor(store) {
+    chalkLogGroup.purple('Todo Component');
+
     this.state = {
       past: [],
       present: {
@@ -10,10 +12,11 @@ export default class TodoComponent {
       },
       future: [],
     };
-
+    
     store.subscribe(()=> { // Subscribe/Connect to store
       const state = store.getState();
-      chalkLog.brown('todoComponent:subscribe -> store.getState()', state);
+      chalkLogGroup.purple('Todo Component');
+      chalkLog.brown('subscribe -> store.getState()', state);
       this.setState({...state.todos });
     });
 
@@ -89,7 +92,8 @@ export default class TodoComponent {
   // Render the UI
   render() { 
     const { items } = this.state.present;
-    chalkLog.teal('todoComponent:render -> items', items); 
+    chalkLog.teal('render -> items', items);
+    console.groupEnd(); 
     this.renderList(items);
   }
 }

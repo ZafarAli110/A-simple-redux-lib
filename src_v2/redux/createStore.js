@@ -1,4 +1,4 @@
-import { chalkLog } from "../../util";
+import { chalkLog, chalkLogGroup } from "../../util";
 
 // Original redux.js createStore ref: https://github.com/reduxjs/redux/blob/d6bad9a8be90defc71b27c33e1348a4f6133b852/src/createStore.js
 export default function createStore(reducer, preloadedState) {
@@ -12,14 +12,20 @@ export default function createStore(reducer, preloadedState) {
   }
 
   function dispatch(action) {
+    // console.clear();  // uncomment this line if you wanted to see one action at a time in a console.log
+    console.groupEnd();
     chalkLog.darkGray('<==========================================>');
-    chalkLog.blue('store.dispatch -> action', action);
+    chalkLogGroup.brownish("Store dispatched an action");
+    chalkLog.blue("store's state -> applicationState", currentState);
+    chalkLog.blue('dispatch -> action', action);
 
     // Reducer returns the new state
-    // currentState = currentReducer(currentReducer, action); // this is will produce a bug in UI, good for interview exercise
+    chalkLog.blue("store is invoking the combine reducers's combination...");
     currentState = currentReducer(currentState, action);
-
+    chalkLog.blue("store gets the new state -> applicationState", currentState);
+    
     // Calling all the listeners/subscribers so that they can get the updated state
+    chalkLog.blue("store is notifiying the listeners/subscribers about state change...");
     const listeners = currentListners = nextListners;
     for(let i = 0; i < listeners.length; i++) {
       const listener = listeners[i];
