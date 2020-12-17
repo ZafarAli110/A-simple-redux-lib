@@ -44,16 +44,22 @@ export default class TodoComponent {
         const payload = {
           text: value,
         }
+        chalkLog.darkGray('<==========================================>');
+        chalkLog.teal('Todo component dispatched an action', addTodo(payload));
         store.dispatch(addTodo(payload));
       }
       this.inputRef.value = '';
     });
     
     this.btnUndoRef.addEventListener('click', () => {
+      chalkLog.darkGray('<==========================================>');
+      chalkLog.teal('Todo component dispatched an action', undo());
       store.dispatch(undo());
     });
     
     this.btnRedoRef.addEventListener('click', () => {
+      chalkLog.darkGray('<==========================================>');
+      chalkLog.teal('Todo component dispatched an action', redo());
       store.dispatch(redo());
     });
   }

@@ -27,10 +27,14 @@ export default class CounterComponent {
 
   dispatchActions(store) {
     document.getElementById('btn-increment').addEventListener('click', () => {
+      chalkLog.darkGray('<==========================================>');
+      chalkLog.brown('Counter component dispatched an action', increment());
       store.dispatch(increment());
     });
     
     document.getElementById('btn-decrement').addEventListener('click', () => {
+      chalkLog.darkGray('<==========================================>');
+      chalkLog.brown('Counter component dispatched an action', decrement());
       store.dispatch(decrement());
     });
   }
