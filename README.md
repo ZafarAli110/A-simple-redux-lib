@@ -1,5 +1,5 @@
 # A-simple-redux-lib
-Demystifying Redux.js - A naïve implementation for educational purpose.
+Demystifying Redux.js - A simple implementation for educational purpose.
 
 This project was bootstrapped with [Webpack](https://webpack.js.org/).
 
