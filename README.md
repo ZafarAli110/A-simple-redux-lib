@@ -14,6 +14,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [http://localhost:8080/](http://localhost:8080/) to view it in the browser, you can change the PORT from webpack.config.js file.
+Once the application is running in the browser, open the browser dev-tools and see the console logs in the order to better understand what is happening under the hood. 
 
 The page will reload if you make edits.<br />
 
