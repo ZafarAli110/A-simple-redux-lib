@@ -13,7 +13,6 @@ export default function createStore(reducer, preloadedState) {
 
   function dispatch(action) {
     // console.clear();  // uncomment this line if you wanted to see one action at a time in a console.log
-    console.groupEnd();
     chalkLogGroup.brownish("Store recieved an action");
     chalkLog.blue("store's state -> applicationState", currentState);
     chalkLog.blue('dispatch -> action', action);
