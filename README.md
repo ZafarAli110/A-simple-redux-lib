@@ -3,6 +3,7 @@ Demystifying Redux.js - A simple implementation for educational purpose.
 
 This project was bootstrapped with [Webpack](https://webpack.js.org/).
 
+### For live demo:- https://zafarali110.github.io/A-simple-redux-lib/ 
 ## Available Scripts
 
 ### Note:- 
@@ -23,6 +24,9 @@ The page will reload if you make edits.<br />
 ### `npm run build`
 
 Builds the `public` folder.<br />
+
+### Deployment
+`npm run deploy` to deploy the project on github pages.
 
 ## Learn More
 
