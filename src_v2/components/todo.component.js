@@ -1,4 +1,4 @@
-import { chalkLog, chalkLogGroup } from "../../util";
+import { chalkLog, chalkLogGroup } from "../../utils";
 import { addTodo, redo, undo } from "../redux/actions/actionCreators";
 
 export default class TodoComponent {

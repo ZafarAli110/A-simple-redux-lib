@@ -5,12 +5,15 @@
   "main": "app.js",
   "scripts": {
     "clean": "rm public/bundle.js",
-    "build": "webpack",
-    "start": "webpack serve"
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": ["demystifying redux js"],
   "author": "Zafar Ali",
   "license": "ISC",
+  "homepage": "https://zafarali110.github.io/A-simple-redux-lib/",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.10",

@@ -1,4 +1,4 @@
-import loggingMiddleware from './logging';
+import loggingMiddleware from './logger';
 import thunkMiddleware from './thunk';
 
 export {

@@ -1,4 +1,4 @@
-import { chalkLog, chalkLogGroup } from "../../util";
+import { chalkLog, chalkLogGroup } from "../../utils";
 
 // Original redux.js createStore ref: https://github.com/reduxjs/redux/blob/d6bad9a8be90defc71b27c33e1348a4f6133b852/src/createStore.js
 export default function createStore(reducer, preloadedState) {

@@ -1,4 +1,4 @@
-import { chalkLog } from "../../../util";
+import { chalkLog } from "../../../utils";
 import { UNDO, REDO } from "../actions/actionTypes";
 
 // This implementation is copied from redux docs: https://redux.js.org/recipes/implementing-undo-history

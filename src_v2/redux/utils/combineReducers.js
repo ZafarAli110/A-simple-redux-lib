@@ -1,4 +1,4 @@
-import { chalkLog, chalkLogGroup } from "../../../util";
+import { chalkLog, chalkLogGroup } from "../../../utils";
 /* 
   The combineReducers function call takes an object with reducers and returns a reducer 
   function, the returned function must have the signature of a reducer function (the state and an action).

@@ -1,5 +1,5 @@
 import { increment, decrement } from "../redux/actions/actionCreators";
-import { chalkLog, chalkLogGroup } from "../../util";
+import { chalkLog, chalkLogGroup } from "../../utils";
 
 export default class CounterComponent {
   constructor(store) {

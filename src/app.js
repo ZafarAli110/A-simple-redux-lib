@@ -1,5 +1,5 @@
 import createStore from "./createStore";
-import { chalkLog } from "../util";
+import { chalkLog } from "../utils";
 
 const initialState = {
   counter: 0,

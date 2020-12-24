@@ -1,4 +1,4 @@
-import { chalkLog, chalkLogGroup } from "../../../util";
+import { chalkLog, chalkLogGroup } from "../../../utils";
 import { DECREMENT, INCREMENT } from "../actions/actionTypes";
 
 const initialState = {

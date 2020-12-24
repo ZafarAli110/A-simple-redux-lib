@@ -1,4 +1,4 @@
-import { chalkLog } from '../../../util.js';
+import { chalkLog } from '../../../utils.js';
 
 const loggerMiddleware = ({ getState }) => next => action => {
   chalkLog.darkGray("<==========================================>");

@@ -13,11 +13,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
   your application in order to see the changes. 
 */
 
-// change this source path to src or src_v2 if you wanted to see that implementation,
+// change this source path to src or src_v2 if you wanted to see that implementation.
 const sourcePath = './src_v3';   
 
 module.exports = {
-  mode: 'development',
   entry: `${sourcePath}/app.js`, 
   output: {
     path: path.resolve(__dirname, 'public'),
