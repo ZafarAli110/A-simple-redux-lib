@@ -10,7 +10,6 @@ export default function createStore(reducer, preloadedState, middleware) {
   }
 
   function dispatch(action) {
-    // console.clear();  // uncomment this line if you wanted to see one action at a time in a console.log
     if (!action || typeof action !== 'object' || Array.isArray(action)) {
       throw new Error('Action must be an object!');
     }

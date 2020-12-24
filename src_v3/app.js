@@ -1,10 +1,12 @@
 import createStore from "./redux/createStore";
 import rootReducer from "./redux/reducers/rootReducer";
+import { loggingMiddleware, thunkMiddleware } from "./redux/middlewares";
+import { appyMiddleware } from "./redux/utils/applyMiddleware";
+
 import CounterComponent from "./components/counter.component";
 import TodoComponent from "./components/todo.component";
 import JokeComponent from "./components/joke.component";
-import { loggingMiddleware, thunkMiddleware } from "./redux/middlewares";
-import { appyMiddleware } from "./redux/utils/applyMiddleware";
+
 
 const middlewares = [loggingMiddleware, thunkMiddleware];
 const store = createStore(rootReducer, {}, appyMiddleware(...middlewares));

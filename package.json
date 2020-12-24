@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "keywords": ["demystifying redux js"],
   "author": "Zafar Ali",
