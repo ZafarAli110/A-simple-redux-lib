@@ -13,16 +13,16 @@ export default function createStore(reducer, preloadedState, middleware) {
     if (!action || typeof action !== 'object' || Array.isArray(action)) {
       throw new Error('Action must be an object!');
     }
-    if (typeof action.type === 'undefined') {
+    if (!action.type) {
       throw new Error('Action must have a type!');
     }
-    
+
     // Reducer returns the new state
     currentState = currentReducer(currentState, action);
-    
+
     // Calling all the listeners/subscribers so that they can get the updated state
     const listeners = currentListners = nextListners;
-    for(let i = 0; i < listeners.length; i++) {
+    for (let i = 0; i < listeners.length; i++) {
       const listener = listeners[i];
       listener();
     }
